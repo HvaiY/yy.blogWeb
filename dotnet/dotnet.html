@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Keywords" content="dotnet,mysql,netcore,net5,identityserver4,dotnet技术">
+    <!--关键词-->
+    <meta name="Description" content="dotnet,mysql,netcore,net5,identityserver4,dotnet技术">
+    <!--描述-->
+    <title>dotnet入口</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #log,
+        #left_title,
+        #right_title {
+            height: 100%;
+            border: solid red 1px;
+        }
+
+        #log {
+            /* position: relative; */
+            float: left;
+            width: 5%;
+
+        }
+
+        #left_title {
+            /* position: relative; */
+            float: left;
+            width: 35%;
+            margin-left: 1px;
+        }
+
+        #right_title {
+            /* position: relative; */
+            width: 20%;
+            float: right;
+        }
+
+        #line,
+        #line_under {
+            border: solid yellow 2px;
+            width: 100%;
+        }
+
+        #left {
+            /* position:relative; */
+            float: left;
+            border: solid red 1px;
+            /* height: 500px; */
+            width: 15%;
+        }
+
+        #center {
+            float: left;
+            border: solid red 1px;
+            /* height: 500px; */
+            width: 59.5%;
+            margin-left: 1px;
+        }
+
+        #right {
+            float: right;
+            border: solid red 1px;
+            /* height: 500px; */
+            width: 15%;
+            margin-left: 1px;
+        }
+       ul li{
+           list-style: none;
+           float: left;
+           margin-left:5%;
+           
+
+       }
+        /* #under {
+            float: right;
+        } */
+    </style>
+</head>
+
+<body>
+    <div style="height: 80px;position:relative;">
+        <div id="log"><img src="images/dotnet.log.png" style="width:100%" alt="C#首页"></div>
+        <div id="left_title">left_title</div>
+        <div id="right_title">right_title</div>
+    </div>
+    <div id="line">
+        <hr>
+    </div>
+    <div style="height: 80px;position:relative;">
+        <div id="left">left</div>
+        <div id="center">center</div>
+        <div id="right">right</div>
+    </div>
+    <div id="line_under">
+        <ul>
+            <li><a href=""></a>></li>
+        </ul>
+        <hr>
+    </div>
+    <div id="under">under</div>
+
+</body>
+<script>
+    var left_title = document.getElementById("left_title");
+    left_title.innerHTML = "<h1>aaaa</h1>";
+    var titles = [{
+        title: "首页",
+        url: "../main.html",
+        color: "white"
+    }, {
+        title: "C#首页",
+        url:"dotnet.html",
+        color: "white"
+    }, {
+        title: "最新",
+        url :"new.html",
+        color: "white"
+    }, {
+        title: "爆点",
+        url :"hot.html",
+        color: "white"
+    }, {
+        title: "其它",
+        url :"other.html",
+        color: "white"
+    }];
+  
+    var titleHtml = "<ul>";
+    for (var i = 0; i < titles.length; i++) {
+        titleHtml += `<li style=' background-color:${titles[i].color}'><a href="${titles[i].url}">${titles[i].title}</a> </li>`;
+    }
+    titleHtml += "</ul>";
+     left_title.innerHTML=titleHtml;
+
+    
+</script>
+
+</html>
